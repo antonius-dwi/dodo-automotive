@@ -706,6 +706,10 @@ a {
 ========================================================= */
 
 .scroll-indicator {
+    position: relative;
+
+    top: -8px;
+
     align-self: center;
 
     display: flex;
