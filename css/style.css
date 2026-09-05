@@ -727,17 +727,14 @@ a {
     letter-spacing: 0.24em;
 }
 
-
 .scroll-icon {
-    width: 27px;
-    height: 43px;
+    width: 34px;
+    height: 28px;
 
     position: relative;
 
-    border:
-        1px solid rgba(255, 255, 255, 0.72);
-
-    border-radius: 999px;
+    border: 0;
+    border-radius: 0;
 }
 
 
@@ -746,19 +743,17 @@ a {
 
     position: absolute;
 
-    top: 8px;
+    top: 2px;
     left: 50%;
 
-    width: 3px;
-    height: 8px;
+    width: 14px;
+    height: 14px;
 
-    border-radius: 999px;
+    border-right: 2px solid rgba(255, 255, 255, 0.82);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.82);
 
-    background: rgba(255, 255, 255, 0.82);
-
-    transform: translateX(-50%);
+    transform: translateX(-50%) rotate(45deg);
 }
-
 
 /* =========================================================
    TEMPORARY SECTIONS
@@ -1732,26 +1727,55 @@ body.is-mobile-device .hero-media img {
     min-height: 0;
     object-fit: contain;
     object-position: center;
-    transform: scale(1.8) translateX(-140px);
+    transform: scale(1.8) translateX(-140px) translateY(-25px);
     transform-origin: center;
 }
 
+
+body.is-mobile-device .hero-overlay {
+    background:
+        linear-gradient(
+            90deg,
+            rgba(4, 6, 8, 0.72) 0%,
+            rgba(4, 6, 8, 0.42) 30%,
+            rgba(4, 6, 8, 0.10) 57%,
+            rgba(4, 6, 8, 0.00) 100%
+        ),
+        linear-gradient(
+            0deg,
+            rgba(2, 3, 4, 0.48) 0%,
+            rgba(2, 3, 4, 0.10) 45%,
+            rgba(2, 3, 4, 0.00) 100%
+        );
+}
+
 /* =========================================================
-   MOBILE DEVICE — HERO CONTENT SCALE & BRAND POSITION
+   MOBILE DEVICE — HEADER,HERO CONTENT SCALE, & BRAND POSITION
 ========================================================= */
+body.is-mobile-device .main-nav a {
+    font-size: 1.1rem;
+    transform: translateX(-70px);
+}
+
+body.is-mobile-device .nav-cta {
+    min-height: 54px;
+    padding-inline: 28px;
+    font-size: 0.9rem;
+}
+
 
 body.is-mobile-device .hero-brand {
     position: absolute;
     top: 105px;
     left: 0;
-    width: 155px;
+    width: 480px;
     margin: 0;
     z-index: 3;
 }
 
 body.is-mobile-device .hero-copy {
     max-width: 760px;
-    padding-bottom: 54px;
+    padding-bottom: 100px;
 }
 
 body.is-mobile-device .hero h1 {
@@ -1781,11 +1805,41 @@ body.is-mobile-device .hero-description {
 }
 
 body.is-mobile-device .hero-actions {
-    margin-top: 30px;
-    gap: 14px;
+    margin-top: 34px;
+    gap: 16px;
 }
 
 body.is-mobile-device .hero-actions .button {
-    min-height: 60px;
-    padding-inline: 30px;
+    min-height: 76px;
+    padding-inline: 40px;
+    font-size: 1rem;
+}
+
+body.is-mobile-device .scroll-indicator {
+    gap: 12px;
+    margin-top: 24px;
+    font-size: 1rem;
+    letter-spacing: 0.24em;
+}
+
+body.is-mobile-device .scroll-icon {
+    width: 34px;
+    height: 28px;
+    border: 0;
+    border-radius: 0;
+}
+
+body.is-mobile-device .scroll-icon::before {
+    content: "";
+    position: absolute;
+    top: 4px;
+    left: 50%;
+
+    width: 14px;
+    height: 14px;
+
+    border-right: 2px solid rgba(255, 255, 255, 0.82);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.82);
+
+    transform: translateX(-50%) rotate(45deg);
 }
