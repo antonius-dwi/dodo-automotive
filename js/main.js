@@ -1,136 +1,83 @@
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener('DOMContentLoaded', () => {
+    const navToggle = document.querySelector('.nav-toggle');
+    const mainNav = document.querySelector('.main-nav');
 
-    const navToggle = document.querySelector(".nav-toggle");
-    const mainNav = document.querySelector(".main-nav");
-
-    const navLinks = mainNav?.querySelectorAll("a");
-
+    const navLinks = mainNav?.querySelectorAll('a');
 
     /* =====================================================
        MOBILE DEVICE DETECTION
     ===================================================== */
 
-    const isMobileDevice =
-        window.matchMedia("(pointer: coarse)").matches;
+    const isMobileDevice = window.matchMedia('(pointer: coarse)').matches;
 
-    document.body.classList.toggle(
-        "is-mobile-device",
-        isMobileDevice
-    );
+    document.body.classList.toggle('is-mobile-device', isMobileDevice);
 
     /* =====================================================
        MOBILE NAVIGATION
     ===================================================== */
 
     if (navToggle && mainNav) {
+        navToggle.addEventListener('click', () => {
+            const isOpen = mainNav.classList.toggle('is-open');
 
-        navToggle.addEventListener("click", () => {
+            navToggle.classList.toggle('is-open', isOpen);
 
-            const isOpen =
-                mainNav.classList.toggle("is-open");
+            navToggle.setAttribute('aria-expanded', String(isOpen));
 
-            navToggle.classList.toggle(
-                "is-open",
-                isOpen
-            );
+            navToggle.setAttribute('aria-label', isOpen ? 'Close navigation' : 'Open navigation');
 
-            navToggle.setAttribute(
-                "aria-expanded",
-                String(isOpen)
-            );
-
-            navToggle.setAttribute(
-                "aria-label",
-                isOpen
-                    ? "Close navigation"
-                    : "Open navigation"
-            );
-
-            document.body.classList.toggle(
-                "nav-open",
-                isOpen
-            );
-
+            document.body.classList.toggle('nav-open', isOpen);
         });
-
 
         navLinks?.forEach((link) => {
+            link.addEventListener('click', () => {
+                mainNav.classList.remove('is-open');
 
-            link.addEventListener("click", () => {
+                navToggle.classList.remove('is-open');
 
-                mainNav.classList.remove("is-open");
+                navToggle.setAttribute('aria-expanded', 'false');
 
-                navToggle.classList.remove("is-open");
+                navToggle.setAttribute('aria-label', 'Open navigation');
 
-                navToggle.setAttribute(
-                    "aria-expanded",
-                    "false"
-                );
-
-                navToggle.setAttribute(
-                    "aria-label",
-                    "Open navigation"
-                );
-
-                document.body.classList.remove(
-                    "nav-open"
-                );
-
+                document.body.classList.remove('nav-open');
             });
-
         });
-
     }
-
 });
 
-const d9ExperienceSlider = document.querySelector(".d9-experience-features");
-const d9ExperienceSlides = document.querySelectorAll(".d9-experience-feature");
-const d9ExperienceDots = document.querySelectorAll(".d9-experience-dot");
+const d9ExperienceSlider = document.querySelector('.d9-experience-features');
+const d9ExperienceSlides = document.querySelectorAll('.d9-experience-feature');
+const d9ExperienceDots = document.querySelectorAll('.d9-experience-dot');
 
-if (
-    d9ExperienceSlider &&
-    d9ExperienceSlides.length &&
-    d9ExperienceDots.length
-) {
+if (d9ExperienceSlider && d9ExperienceSlides.length && d9ExperienceDots.length) {
     const updateD9ExperienceIndicator = () => {
         const slideWidth = d9ExperienceSlider.clientWidth;
 
-        const activeIndex = Math.round(
-            d9ExperienceSlider.scrollLeft / slideWidth
-        );
+        const activeIndex = Math.round(d9ExperienceSlider.scrollLeft / slideWidth);
 
         d9ExperienceDots.forEach((dot, index) => {
             const isActive = index === activeIndex;
 
-            dot.classList.toggle("is-active", isActive);
+            dot.classList.toggle('is-active', isActive);
 
             if (isActive) {
-                dot.setAttribute("aria-current", "true");
+                dot.setAttribute('aria-current', 'true');
             } else {
-                dot.removeAttribute("aria-current");
+                dot.removeAttribute('aria-current');
             }
         });
     };
 
-
-    d9ExperienceSlider.addEventListener(
-        "scroll",
-        updateD9ExperienceIndicator,
-        { passive: true }
-    );
-
+    d9ExperienceSlider.addEventListener('scroll', updateD9ExperienceIndicator, { passive: true });
 
     d9ExperienceDots.forEach((dot, index) => {
-        dot.addEventListener("click", () => {
+        dot.addEventListener('click', () => {
             d9ExperienceSlider.scrollTo({
-                left:
-                    d9ExperienceSlider.clientWidth * index,
-                behavior: "smooth"
+                left: d9ExperienceSlider.clientWidth * index,
+                behavior: 'smooth',
             });
         });
     });
-
 
     updateD9ExperienceIndicator();
 }
