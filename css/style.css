@@ -2049,6 +2049,18 @@ body.is-mobile-device .why-d9-content p {
     line-height: 1.4;
 }
 
+.safety-systems-visual {
+    width: 100%;
+}
+
+.safety-systems-visual img {
+    display: block;
+    width: 100%;
+    height: auto;
+    transform: translateY(-50px);
+    scale: 0.9;
+}
+
 /* =========================================================
    TECHNOLOGY & SAFETY — PHYSICAL MOBILE DEVICE
 ========================================================= */
