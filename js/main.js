@@ -7,6 +7,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     /* =====================================================
+       MOBILE DEVICE DETECTION
+    ===================================================== */
+
+    const isMobileDevice =
+        window.matchMedia("(pointer: coarse)").matches;
+
+    document.body.classList.toggle(
+        "is-mobile-device",
+        isMobileDevice
+    );
+
+    /* =====================================================
        MOBILE NAVIGATION
     ===================================================== */
 

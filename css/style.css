@@ -181,7 +181,7 @@ a {
     align-items: center;
 
     gap: 42px;
-    transform: translateX(200px);
+    transform: translateX(150px)
 }
 
 .main-nav a {
@@ -993,7 +993,7 @@ button:focus-visible {
 
 
 /* =========================================================
-   MOBILE
+   MOBILE — DESKTOP HERO SCALED
 ========================================================= */
 
 @media (max-width: 600px) {
@@ -1002,60 +1002,26 @@ button:focus-visible {
         --page-padding: 20px;
     }
 
-
     /* ---------- Header ---------- */
 
-    .brand-name {
-        font-size: 1.45rem;
+    .nav-wrapper {
+        min-height: 64px;
     }
-
-    .brand-role {
-        font-size: 0.56rem;
-    }
-
-
-    /* ---------- Hero ---------- */
-
-    .hero {
-        min-height: 100svh;
-    }
-
-    .hero-media img {
-        object-position: 60% 82%;
-        transform: translateY(-120px) scale(1);
-    }
-
-    .hero-overlay {
-        background:
-            linear-gradient(
-                180deg,
-                rgba(3, 4, 5, 0.38) 0%,
-                rgba(3, 4, 5, 0.28) 28%,
-                rgba(3, 4, 5, 0.58) 58%,
-                rgba(3, 4, 5, 0.92) 100%
-            );
-    }
-
-        /* ---------- Header CTA ---------- */
 
     .nav-cta {
-    width: 40px;
-    height: 40px;
+        width: 40px;
+        height: 40px;
+        padding: 0;
 
-    padding: 0;
+        display: grid;
+        place-items: center;
 
-    display: grid;
-    place-items: center;
+        border: 0;
+        background: transparent;
+        color: var(--color-gold);
 
-    border: 0;
-
-    background: transparent;
-
-    color: var(--color-gold);
-
-    flex: 0 0 40px;
-
-    margin-left: auto;
+        flex: 0 0 40px;
+        margin-left: auto;
     }
 
     .nav-cta-label {
@@ -1065,288 +1031,37 @@ button:focus-visible {
     .nav-cta-whatsapp {
         width: 25px;
         height: 25px;
-
         display: block;
-
         fill: currentColor;
     }
 
-    .nav-wrapper {
-    min-height: 64px;
-
-    display: flex;
-    align-items: center;
-
-    justify-content: flex-start;
-
-    gap: 5px;
-    }
-
     .nav-toggle span {
-    background: rgba(255, 255, 255, 0.72);
-    }
-    /* ---------- Hero Content ---------- */
-
-    .hero-content {
-        min-height: 100svh;
-
-        padding-top: 110px;
-        padding-bottom: 24px;
-
-        justify-content: flex-end;
-    }
-
-
-    .hero-copy {
-        max-width: 100%;
-        padding-bottom: 0;
-
-    }
-
-
-    /* ---------- DENZA Logo ---------- */
-
-    .hero-brand {
-    position: absolute;
-
-    top: 80px;
-    left: 0px;
-
-    width: 125px;
-
-    margin: 0;
-
-    z-index: 3;
-
-    transform: translateX(-2px);
-    }
-
-
-    /* ---------- Heading ---------- */
-
-    .hero h1 {
-        display: none;
-        max-width: 100%;
-
-        font-size:
-            clamp(
-                3.2rem,
-                14vw,
-                4.8rem
-            );
-
-        line-height: 0.86;
-
-        letter-spacing: -0.045em;
-    }
-
-
-    /* ---------- Hero Title ---------- */
-
-    .hero-title {
-        max-width: 310px;
-
-        margin-top: 0px;
-
-        font-size: 1.28rem;
-
-        line-height: 1.15;
-    }
-
-
-    /* ---------- Divider ---------- */
-
-    .hero-divider {
-    display: none;
-    width: 58px;
-    margin-top: 0px;
-    }
-
-
-    /* ---------- Description ---------- */
-
-    .hero-description {
-        max-width: 320px;
-
-        margin-top: 0px;
-
-        font-size: 0.9rem;
-
-        line-height: 1.65;
-    }
-
-
-    /* ---------- Actions ---------- */
-
-    .hero-actions {
-        width: 100%;
-
-        margin-top: 28px;
-
-        display: flex;
-        flex-direction: column;
-
-        gap: 10px;
-    }
-
-
-    .hero-actions .button {
-        width: 100%;
-
-        min-height: 54px;
+        background: rgba(255, 255, 255, 0.72);
     }
 
 
     /* =====================================================
-       MOBILE SPEC BAR
+       HERO
+       Keep desktop composition, scale entire hero
     ====================================================== */
 
+    .hero {
+        --hero-scale: calc(100vw / 1440px);
 
-    .hero-specs {
-        display: none;
-        width: 100%;
+        width: 1440px;
+        zoom: var(--hero-scale);
 
-        margin-top: 28px;
-
-        min-height: 0;
-
-        display: grid;
-
-        grid-template-columns:
-            repeat(2, minmax(0, 1fr));
-
-        border-radius: 8px;
-
-        background:
-            rgba(3, 4, 5, 0.45);
-
-        backdrop-filter: blur(14px);
-        -webkit-backdrop-filter: blur(14px);
-
-        display: none;
+        margin-top: 64px;
     }
 
+    .hero {
+    --hero-scale: calc(100vw / 1440px);
 
-    .hero-spec {
-        min-height: 72px;
+    width: 1440px;
+    zoom: var(--hero-scale);
 
-        padding:
-            10px 12px;
-
-        gap: 9px;
-
-        justify-content: center;
-
-        border: 0;
-    }
-
-
-    /* Vertical divider */
-
-    .hero-spec:nth-child(2),
-    .hero-spec:nth-child(4) {
-        border-left:
-            1px solid rgba(255, 255, 255, 0.10);
-    }
-
-
-    /* Horizontal divider */
-
-    .hero-spec:nth-child(1),
-    .hero-spec:nth-child(2) {
-    border-bottom:
-        1px solid rgba(255, 255, 255, 0.10);
-    }
-
-    .hero-spec:nth-child(3),
-    .hero-spec:nth-child(4) {
-    border-bottom: 0;
-    }
-
-
-    /* Remove desktop pseudo separators */
-
-    .hero-spec:not(:last-child)::after {
-        display: none;
-    }
-
-
-    /* Acceleration takes full width */
-
-    .hero-spec:nth-child(5) {
-        display: none;
-        grid-column: 1 / -1;
-
-        min-height: 68px;
-
-        justify-content: center;
-
-        border-left: 0;
-        border-bottom: 0;
-    }
-
-
-    /* ---------- Spec Icon ---------- */
-
-    .hero-spec-icon {
-        flex: 0 0 22px;
-
-        width: 22px;
-        height: 22px;
-    }
-
-
-    .hero-spec-icon svg {
-        width: 22px;
-        height: 22px;
-    }
-
-
-
-    /* ---------- Spec Copy ---------- */
-
-    .hero-spec-copy {
-        min-width: 0;
-        flex: 1;
-    }
-
-
-    .hero-spec-value {
-        min-width: 0;
-
-        font-size: 0.9rem;
-
-        line-height: 1.05;
-
-        white-space: nowrap;
-    }
-
-
-    .hero-spec-label {
-        min-width: 0;
-
-        margin-top: 4px;
-
-        font-size: 0.55rem;
-
-        line-height: 1.2;
-
-        white-space: nowrap;
-    }
-
-    .hero-spec {
-        display: none;
-    }
-
-    /* ---------- Scroll ---------- */
-    .scroll-icon {
-        display: none;
-    }
-    .scroll-indicator {
-
-        align-self: center;
-        
-    }
+    margin-top: 64px;
+}
 }
 
 /* =========================================================
@@ -2005,4 +1720,72 @@ button:focus-visible {
     .d9-experience-footer-mark {
         margin-top: 20px;
     }
+}
+
+/* =========================================================
+   MOBILE DEVICE — HERO IMAGE FRAMING
+========================================================= */
+
+body.is-mobile-device .hero-media img {
+    width: 100%;
+    height: 100%;
+    min-height: 0;
+    object-fit: contain;
+    object-position: center;
+    transform: scale(1.8) translateX(-140px);
+    transform-origin: center;
+}
+
+/* =========================================================
+   MOBILE DEVICE — HERO CONTENT SCALE & BRAND POSITION
+========================================================= */
+
+body.is-mobile-device .hero-brand {
+    position: absolute;
+    top: 105px;
+    left: 0;
+    width: 155px;
+    margin: 0;
+    z-index: 3;
+}
+
+body.is-mobile-device .hero-copy {
+    max-width: 760px;
+    padding-bottom: 54px;
+}
+
+body.is-mobile-device .hero h1 {
+    display: block;
+    font-size: 7.5rem;
+    line-height: 0.86;
+    letter-spacing: -0.045em;
+}
+
+body.is-mobile-device .hero-title {
+    max-width: 420px;
+    margin-top: 24px;
+    font-size: 1.7rem;
+    line-height: 1.15;
+}
+
+body.is-mobile-device .hero-divider {
+    display: block;
+    margin-top: 24px;
+}
+
+body.is-mobile-device .hero-description {
+    max-width: 440px;
+    margin-top: 20px;
+    font-size: 1.1rem;
+    line-height: 1.65;
+}
+
+body.is-mobile-device .hero-actions {
+    margin-top: 30px;
+    gap: 14px;
+}
+
+body.is-mobile-device .hero-actions .button {
+    min-height: 60px;
+    padding-inline: 30px;
 }
