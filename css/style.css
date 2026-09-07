@@ -2568,3 +2568,526 @@ body.is-mobile-device .technology-safety-pillar-image img {
         padding-right: 34px;
     }
 }
+
+/* =========================================================
+   DENZA Z9 — COMING SOON
+========================================================= */
+
+.denza-z9-section {
+    position: relative;
+    overflow: hidden;
+    background: #080b0e;
+    color: #f4f4f1;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.denza-z9-hero {
+    position: relative;
+    min-height: 570px;
+    overflow: hidden;
+    background: #11161b;
+}
+
+.denza-z9-hero > img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+}
+
+.denza-z9-hero-overlay {
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(
+            90deg,
+            rgba(5, 8, 11, 0.86) 0%,
+            rgba(5, 8, 11, 0.55) 34%,
+            rgba(5, 8, 11, 0.12) 68%,
+            rgba(5, 8, 11, 0.24) 100%
+        ),
+        linear-gradient(
+            180deg,
+            rgba(5, 8, 11, 0.08) 0%,
+            rgba(5, 8, 11, 0.04) 55%,
+            rgba(5, 8, 11, 0.72) 100%
+        );
+}
+
+.denza-z9-hero-inner {
+    position: relative;
+    z-index: 2;
+    min-height: 570px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 30px;
+    padding-bottom: 36px;
+}
+
+.denza-z9-hero-copy {
+    max-width: 500px;
+}
+
+.denza-z9-eyebrow,
+.denza-z9-index,
+.denza-z9-status,
+.denza-z9-side-note,
+.denza-z9-interest-label,
+.denza-z9-footer-line {
+    font-family: var(--font-sans);
+    text-transform: uppercase;
+    letter-spacing: 0.24em;
+}
+
+.denza-z9-eyebrow {
+    display: block;
+    margin-bottom: 22px;
+    font-size: 0.68rem;
+    color: rgba(255, 255, 255, 0.74);
+}
+
+.denza-z9-hero h2 {
+    margin: 0;
+    font-family: var(--font-sans);
+    font-size: clamp(3.2rem, 5vw, 5.8rem);
+    font-weight: 400;
+    line-height: 0.92;
+    letter-spacing: -0.045em;
+    color: #fff;
+}
+
+.denza-z9-hero h2 span {
+    display: block;
+}
+
+.denza-z9-hero-copy > p {
+    margin: 24px 0 0;
+    font-family: var(--font-sans);
+    font-size: 0.98rem;
+    line-height: 1.55;
+    color: rgba(255, 255, 255, 0.78);
+}
+
+.denza-z9-rule,
+.denza-z9-small-rule {
+    width: 40px;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.68);
+}
+
+.denza-z9-rule {
+    margin-top: 23px;
+}
+
+.denza-z9-status {
+    display: block;
+    margin-top: 17px;
+    font-size: 0.56rem;
+    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.72);
+}
+
+.denza-z9-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 15px;
+    min-height: 50px;
+    margin-top: 25px;
+    padding: 0 27px;
+    background: #e1c88f;
+    color: #111315;
+    font-family: var(--font-sans);
+    font-size: 0.67rem;
+    font-weight: 700;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition:
+        transform 180ms ease,
+        background 180ms ease;
+}
+
+.denza-z9-button:hover {
+    transform: translateY(-2px);
+    background: #edd9a8;
+}
+
+.denza-z9-side-note {
+    align-self: flex-end;
+    margin-bottom: 12px;
+    padding-right: 24px;
+    font-size: 0.55rem;
+    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.78);
+    text-align: left;
+}
+
+/* =========================
+   HIGHLIGHTS
+========================= */
+
+.denza-z9-highlights {
+    padding: 18px 0 24px;
+    background: #0a0e12;
+}
+
+.denza-z9-highlight-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 30px;
+}
+
+.denza-z9-highlight figure {
+    height: 132px;
+    margin: 0 0 13px;
+    overflow: hidden;
+    background: #14191e;
+}
+
+.denza-z9-highlight figure img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 500ms ease;
+}
+
+.denza-z9-highlight:hover figure img {
+    transform: scale(1.025);
+}
+
+.denza-z9-index {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 0.54rem;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.denza-z9-highlight h3 {
+    margin: 0;
+    font-family: var(--font-sans);
+    font-size: 1.05rem;
+    font-weight: 500;
+    line-height: 1.15;
+    letter-spacing: 0.075em;
+    color: #fff;
+}
+
+.denza-z9-highlight p {
+    max-width: 330px;
+    margin: 9px 0 0;
+    font-family: var(--font-sans);
+    font-size: 0.74rem;
+    line-height: 1.55;
+    color: rgba(255, 255, 255, 0.68);
+}
+
+.denza-z9-small-rule {
+    margin-top: 13px;
+}
+
+/* =========================
+   INTEREST / FORM
+========================= */
+
+.denza-z9-interest {
+    display: grid;
+    grid-template-columns: 1.08fr 0.92fr;
+    min-height: 430px;
+    background: #10161d;
+}
+
+.denza-z9-interest-image {
+    position: relative;
+    min-height: 430px;
+    overflow: hidden;
+}
+
+.denza-z9-interest-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.denza-z9-interest-image::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(90deg, rgba(0, 0, 0, 0.45), transparent 60%),
+        linear-gradient(180deg, transparent 55%, rgba(0, 0, 0, 0.72));
+}
+
+.denza-z9-interest-label {
+    position: absolute;
+    z-index: 1;
+    left: 32px;
+    bottom: 32px;
+    font-size: 0.58rem;
+    line-height: 1.7;
+    color: #fff;
+}
+
+.denza-z9-interest-copy {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 48px 7vw 48px 48px;
+}
+
+.denza-z9-interest-copy .denza-z9-eyebrow {
+    margin-bottom: 14px;
+}
+
+.denza-z9-interest-copy h3 {
+    margin: 0;
+    font-family: var(--font-sans);
+    font-size: clamp(2.2rem, 3.2vw, 3.6rem);
+    font-weight: 400;
+    line-height: 0.98;
+    letter-spacing: -0.04em;
+}
+
+.denza-z9-interest-copy > p {
+    max-width: 520px;
+    margin: 17px 0 22px;
+    font-family: var(--font-sans);
+    font-size: 0.76rem;
+    line-height: 1.65;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* FORM */
+
+.denza-z9-form {
+    width: 100%;
+    max-width: 520px;
+    display: grid;
+    gap: 10px;
+}
+
+.denza-z9-form label {
+    display: block;
+}
+
+.denza-z9-form input {
+    width: 100%;
+    height: 43px;
+    padding: 0 14px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 2px;
+    outline: none;
+    background: rgba(4, 7, 10, 0.34);
+    color: #fff;
+    font-family: var(--font-sans);
+    font-size: 0.74rem;
+    transition:
+        border-color 180ms ease,
+        background 180ms ease;
+}
+
+.denza-z9-form input::placeholder {
+    color: rgba(255, 255, 255, 0.58);
+}
+
+.denza-z9-form input:focus {
+    border-color: rgba(225, 200, 143, 0.9);
+    background: rgba(4, 7, 10, 0.52);
+}
+
+.denza-z9-submit {
+    width: 100%;
+    min-height: 50px;
+    margin-top: 3px;
+    border: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    background: #e1c88f;
+    color: #111315;
+    font-family: var(--font-sans);
+    font-size: 0.67rem;
+    font-weight: 700;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition:
+        transform 180ms ease,
+        background 180ms ease;
+}
+
+.denza-z9-submit:hover {
+    transform: translateY(-2px);
+    background: #edd9a8;
+}
+
+.denza-z9-privacy {
+    max-width: 390px;
+    margin: 17px 0 0;
+    padding-left: 22px;
+    position: relative;
+    font-family: var(--font-sans);
+    font-size: 0.62rem;
+    line-height: 1.55;
+    color: rgba(255, 255, 255, 0.55);
+}
+
+.denza-z9-privacy::before {
+    content: '⌕';
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 0.8rem;
+    color: #e1c88f;
+}
+
+/* =========================
+   CLOSING VISUAL
+========================= */
+
+.denza-z9-closing {
+    position: relative;
+    height: 250px;
+    overflow: hidden;
+}
+
+.denza-z9-closing > img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 60%;
+}
+
+.denza-z9-closing-overlay {
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(90deg, rgba(4, 7, 10, 0.64), rgba(4, 7, 10, 0.05) 60%),
+        linear-gradient(180deg, rgba(4, 7, 10, 0.08), rgba(4, 7, 10, 0.58));
+}
+
+.denza-z9-closing-copy {
+    position: absolute;
+    z-index: 1;
+    left: max(32px, calc((100vw - var(--container-width)) / 2 + 32px));
+    bottom: 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-family: var(--font-sans);
+    font-size: 0.68rem;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.22em;
+}
+
+.denza-z9-closing-copy .denza-z9-small-rule {
+    margin-top: 12px;
+}
+
+/* =========================
+   FOOTER LINE
+========================= */
+
+.denza-z9-footer-line {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    padding: 19px 32px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    background: #080b0e;
+    color: rgba(255, 255, 255, 0.62);
+    font-size: 0.54rem;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+    .denza-z9-hero,
+    .denza-z9-hero-inner {
+        min-height: 500px;
+    }
+
+    .denza-z9-highlight-grid {
+        gap: 18px;
+    }
+
+    .denza-z9-interest-copy {
+        padding-left: 34px;
+        padding-right: 34px;
+    }
+}
+
+@media (max-width: 600px) {
+    .denza-z9-hero,
+    .denza-z9-hero-inner {
+        min-height: 540px;
+    }
+
+    .denza-z9-hero-inner {
+        align-items: flex-end;
+    }
+
+    .denza-z9-hero > img {
+        object-position: 62% center;
+    }
+
+    .denza-z9-hero-copy {
+        max-width: 88%;
+        padding-bottom: 18px;
+    }
+
+    .denza-z9-hero h2 {
+        font-size: clamp(2.8rem, 10vw, 4.2rem);
+    }
+
+    .denza-z9-side-note {
+        display: none;
+    }
+
+    .denza-z9-highlight-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .denza-z9-highlight figure {
+        height: 180px;
+    }
+
+    .denza-z9-interest {
+        grid-template-columns: 1fr;
+    }
+
+    .denza-z9-interest-image {
+        min-height: 300px;
+    }
+
+    .denza-z9-interest-copy {
+        padding: 42px 24px 48px;
+    }
+
+    .denza-z9-interest-copy h3 {
+        font-size: clamp(2rem, 8vw, 3rem);
+    }
+
+    .denza-z9-closing {
+        height: 210px;
+    }
+
+    .denza-z9-footer-line {
+        padding: 17px 24px;
+    }
+}
