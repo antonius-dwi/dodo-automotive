@@ -2490,6 +2490,20 @@ body.is-mobile-device .technology-safety-pillar-image img {
     transform: translateY(-50%) translateX(20%);
 }
 
+.denza-lineup-intro p {
+    max-width: 390px;
+
+    margin-top: 24px;
+
+    font-size: 0.92rem;
+
+    font-weight: 400;
+
+    line-height: 1.65;
+
+    letter-spacing: 0.01em;
+}
+
 .denza-lineup-card--d9 .denza-lineup-content h3 {
     margin: 0;
 
@@ -2512,6 +2526,32 @@ body.is-mobile-device .technology-safety-pillar-image img {
 
 .denza-lineup-card--d9 .denza-lineup-link {
     margin-top: 20px;
+}
+
+.denza-lineup-intro::after {
+    content: 'DIFFERENT WAYS TO MOVE\A A BRIGHTER TOMORROW';
+
+    white-space: pre-line;
+
+    display: block;
+
+    margin-top: 30px;
+
+    padding-top: 18px;
+
+    width: fit-content;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.55);
+
+    font-size: 0.58rem;
+
+    line-height: 1.9;
+
+    letter-spacing: 0.28em;
+
+    text-transform: uppercase;
+
+    color: rgba(255, 255, 255, 0.62);
 }
 
 /* =========================
