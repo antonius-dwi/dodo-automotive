@@ -5,31 +5,24 @@
 
 :root {
     /* ---------- Colors ---------- */
-
     --color-bg: #050607;
     --color-surface: #0d0f11;
-
     --color-text: #f4f4f1;
     --color-text-soft: #c8c9c5;
     --color-text-muted: #898b87;
-
     --color-gold: #c6a15b;
     --color-gold-soft: #e1c88f;
-
     --color-border: rgba(255, 255, 255, 0.14);
     --color-border-soft: rgba(255, 255, 255, 0.08);
 
     /* ---------- Layout ---------- */
-
     --container-width: 1440px;
     --page-padding: 32px;
 
     /* ---------- Typography ---------- */
-
     --font-sans: Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif;
 
     /* ---------- Motion ---------- */
-
     --transition-fast: 180ms ease;
     --transition-base: 300ms ease;
 }
@@ -37,7 +30,6 @@
 /* =========================================================
    RESET
 ========================================================= */
-
 *,
 *::before,
 *::after {
@@ -51,15 +43,11 @@ html {
 
 body {
     margin: 0;
-
     background: var(--color-bg);
     color: var(--color-text);
-
     font-family: var(--font-sans);
-
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
-
     overflow-x: clip;
 }
 
@@ -85,92 +73,70 @@ a {
 /* =========================================================
    GLOBAL
 ========================================================= */
-
 .container {
     width: min(calc(100% - (var(--page-padding) * 2)), var(--container-width));
-
     margin-inline: auto;
 }
 
 /* =========================================================
    HEADER
 ========================================================= */
-
 .site-header {
     position: fixed;
-
     inset: 0 0 auto;
-
     z-index: 1000;
-
     border-bottom: 1px solid var(--color-border-soft);
-
     background: linear-gradient(to bottom, rgba(3, 4, 5, 0.82), rgba(3, 4, 5, 0.58));
-
     backdrop-filter: blur(18px);
     -webkit-backdrop-filter: blur(18px);
 }
 
 .nav-wrapper {
     min-height: 82px;
-
     display: flex;
     align-items: center;
     justify-content: space-between;
-
     gap: 32px;
 }
 
 /* ---------- Brand ---------- */
-
 .brand {
     flex-shrink: 0;
-
     display: flex;
     flex-direction: column;
-
     gap: 2px;
 }
 
 .brand-name {
     font-size: 1.7rem;
     font-weight: 500;
-
     letter-spacing: 0.22em;
     line-height: 1;
 }
 
 .brand-role {
     color: var(--color-text-soft);
-
     font-size: 0.62rem;
     font-weight: 500;
-
     letter-spacing: 0.25em;
-
     line-height: 1.4;
 }
 
 /* ---------- Navigation ---------- */
-
 .main-nav {
     display: flex;
     align-items: center;
-
     gap: 42px;
     transform: translateX(150px);
 }
 
 .main-nav a {
     position: relative;
-
     color: var(--color-text-soft);
-
     font-size: 0.82rem;
     font-weight: 500;
     letter-spacing: 0.08em;
     text-transform: uppercase;
-
     transition: color var(--transition-fast);
 }
 
@@ -180,52 +146,35 @@ a {
 
 .main-nav a::after {
     content: '';
-
     position: absolute;
-
     left: 0;
     bottom: -9px;
-
     width: 100%;
     height: 1px;
-
     background: var(--color-gold);
-
     transform: scaleX(0);
-
     transform-origin: right;
-
     transition: transform var(--transition-base);
 }
 
 .main-nav a:hover::after {
     transform: scaleX(1);
-
     transform-origin: left;
 }
 
 /* ---------- Header CTA ---------- */
-
 .nav-cta {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-
     min-height: 46px;
-
     padding-inline: 24px;
-
     border: 1px solid var(--color-gold);
-
     color: var(--color-text);
-
     font-size: 0.72rem;
     font-weight: 500;
-
     letter-spacing: 0.08em;
-
     text-transform: uppercase;
-
     transition:
         background var(--transition-fast),
         color var(--transition-fast);
@@ -233,7 +182,6 @@ a {
 
 .nav-cta:hover {
     background: var(--color-gold);
-
     color: #080808;
 }
 
@@ -241,6 +189,7 @@ a {
 .mobile-nav-cta {
     display: none;
 }
+
 .nav-cta-whatsapp {
     display: none;
 }
@@ -248,52 +197,37 @@ a {
 /* =========================================================
    HERO
 ========================================================= */
-
 .hero {
     position: relative;
-
     min-height: 100svh;
-
     display: flex;
     align-items: flex-end;
-
     overflow: hidden;
-
     background: #050607;
 }
 
 /* ---------- Image ---------- */
-
 .hero-media {
     position: absolute;
-
     inset: 0;
-
     z-index: 0;
-
     overflow: hidden;
 }
 
 .hero-media img {
     width: 100%;
     height: 100%;
-
     object-fit: cover;
     object-position: center 85%;
-
     transform: translateY(-70px);
     filter: brightness(1.08) contrast(1.03);
 }
 
 /* ---------- Overlay ---------- */
-
 .hero-overlay {
     position: absolute;
-
     inset: 0;
-
     z-index: 1;
-
     background:
         linear-gradient(
             90deg,
@@ -311,59 +245,42 @@ a {
 }
 
 /* ---------- Hero content ---------- */
-
 .hero-content {
     position: relative;
-
     z-index: 2;
-
     min-height: 100svh;
-
     display: flex;
     flex-direction: column;
-
     justify-content: flex-end;
-
     padding-top: 130px;
     padding-bottom: 44px;
 }
 
 .hero-copy {
     max-width: 620px;
-
     padding-bottom: 54px;
 }
 
 /* ---------- Brand label ---------- */
-
 .hero-brand {
     width: 200px;
-
     margin: 0 0 18px;
 }
 
 .hero-brand img {
     display: block;
-
     width: 100%;
     height: auto;
-
     object-fit: contain;
 }
 
 /* ---------- Heading ---------- */
-
 .hero h1 {
     margin: 0;
-
     font-family: 'Times New Roman', Georgia, serif;
-
     font-size: clamp(4.8rem, 8vw, 8.5rem);
-
     font-weight: 400;
-
     line-height: 0.82;
-
     letter-spacing: -0.04em;
 }
 
@@ -374,88 +291,60 @@ a {
 
 .hero-model-number {
     margin-left: 0.03em;
-
     transform: translateY(0.1em);
 }
 
 /* ---------- Hero title ---------- */
-
 .hero-title {
     max-width: 380px;
-
     margin: 24px 0 0;
-
     color: var(--color-gold-soft);
-
     font-family: 'Times New Roman', Georgia, serif;
-
     font-size: clamp(1.45rem, 2vw, 2.15rem);
-
     font-weight: 400;
-
     line-height: 1.18;
-
     letter-spacing: -0.015em;
 }
 
 /* ---------- Divider ---------- */
-
 .hero-divider {
     width: 58px;
     height: 1px;
-
     margin-top: 24px;
-
     background: var(--color-gold);
 }
 
 /* ---------- Description ---------- */
-
 .hero-description {
     max-width: 390px;
-
     margin: 22px 0 0;
-
     color: var(--color-text-soft);
-
     font-size: 1rem;
-
     line-height: 1.7;
 }
 
 /* ---------- Actions ---------- */
-
 .hero-actions {
     display: flex;
     flex-wrap: wrap;
-
     gap: 12px;
-
     margin-top: 34px;
 }
 
 /* =========================================================
    BUTTONS
 ========================================================= */
-
 .button {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-
     min-height: 54px;
-
     padding-inline: 24px;
-
     border: 1px solid var(--color-border);
-
     font-size: 0.78rem;
     font-weight: 500;
-
     letter-spacing: 0.08em;
-
     text-transform: uppercase;
-
     transition:
         background var(--transition-fast),
         color var(--transition-fast),
@@ -469,88 +358,62 @@ a {
 
 .button-primary {
     background: var(--color-gold);
-
     border-color: var(--color-gold);
-
     color: #080808;
 }
 
 .button-primary:hover {
     background: #d5b36c;
-
     border-color: #d5b36c;
 }
 
 .button-secondary {
     gap: 12px;
-
     background: rgba(8, 9, 10, 0.12);
-
     border-color: rgba(255, 255, 255, 0.45);
-
     color: var(--color-text);
-
     backdrop-filter: blur(8px);
 }
 
 .button-secondary:hover {
     background: rgba(255, 255, 255, 0.08);
-
     border-color: var(--color-text);
 }
 
 /* =========================================================
    HERO SPECS
 ========================================================= */
-
 .hero-specs {
     width: 100%;
-
     display: grid;
-
     grid-template-columns: repeat(5, minmax(0, 1fr));
-
     min-height: 94px;
-
     overflow: hidden;
-
     border: 1px solid rgba(255, 255, 255, 0.08);
-
     border-radius: 8px;
-
     background: rgba(3, 4, 5, 0.45);
-
     backdrop-filter: blur(14px);
     -webkit-backdrop-filter: blur(14px);
 }
 
 .hero-spec {
     position: relative;
-
     min-height: 94px;
-
     display: flex;
     align-items: center;
     justify-content: center;
-
     gap: 14px;
-
     padding: 16px 20px;
-
     border-right: 0;
 }
 
 .hero-spec:not(:last-child)::after {
     content: '';
-
     position: absolute;
-
     top: 22%;
     right: 0;
-
     width: 1px;
     height: 56%;
-
     background: rgba(255, 255, 255, 0.1);
 }
 
@@ -559,29 +422,22 @@ a {
 }
 
 /* ---------- Icon ---------- */
-
 .hero-spec-icon {
     flex: 0 0 36px;
-
     width: 36px;
     height: 36px;
-
     display: grid;
     place-items: center;
-
     color: rgba(255, 255, 255, 0.78);
 }
 
 .hero-spec-icon svg {
     width: 34px;
     height: 34px;
-
     overflow: visible;
-
     fill: none;
     stroke: currentColor;
     stroke-width: 1.45;
-
     stroke-linecap: round;
     stroke-linejoin: round;
 }
@@ -593,103 +449,72 @@ a {
 }
 
 /* ---------- Copy ---------- */
-
 .hero-spec-copy {
     min-width: 0;
-
     display: flex;
     flex-direction: column;
-
     justify-content: center;
-
     text-align: left;
 }
 
 .hero-spec-value {
     color: var(--color-text);
-
     font-size: clamp(1.18rem, 1.65vw, 1.7rem);
-
     font-weight: 400;
-
     line-height: 1.1;
-
     white-space: nowrap;
 }
 
 .hero-spec-label {
     margin-top: 3px;
-
     color: rgba(255, 255, 255, 0.62);
-
     font-size: 0.72rem;
-
     font-weight: 400;
-
     letter-spacing: 0.015em;
-
     white-space: nowrap;
-
     text-transform: none;
 }
 
 /* =========================================================
    SCROLL INDICATOR
 ========================================================= */
-
 .scroll-indicator {
     position: relative;
-
     top: -8px;
-
     align-self: center;
-
     display: flex;
     flex-direction: column;
     align-items: center;
-
     gap: 10px;
-
     margin-top: 20px;
-
     color: rgba(255, 255, 255, 0.68);
-
     font-size: 0.64rem;
-
     letter-spacing: 0.24em;
 }
 
 .scroll-icon {
     width: 34px;
     height: 28px;
-
     position: relative;
-
     border: 0;
     border-radius: 0;
 }
 
 .scroll-icon::before {
     content: '';
-
     position: absolute;
-
     top: 2px;
     left: 50%;
-
     width: 14px;
     height: 14px;
-
     border-right: 2px solid rgba(255, 255, 255, 0.82);
     border-bottom: 2px solid rgba(255, 255, 255, 0.82);
-
     transform: translateX(-50%) rotate(45deg);
 }
 
 /* =========================================================
    TEMPORARY SECTIONS
 ========================================================= */
-
 main > section:not(.hero) {
     min-height: 1px;
 }
@@ -697,40 +522,31 @@ main > section:not(.hero) {
 /* =========================================================
    FOOTER
 ========================================================= */
-
 .site-footer {
     padding-block: 28px;
-
     background: var(--color-bg);
-
     border-top: 1px solid var(--color-border-soft);
 }
 
 .site-footer p {
     margin: 0;
-
     color: var(--color-text-muted);
-
     font-size: 0.68rem;
-
     letter-spacing: 0.08em;
 }
 
 /* =========================================================
    FOCUS STATES
 ========================================================= */
-
 a:focus-visible,
 button:focus-visible {
     outline: 2px solid var(--color-gold);
-
     outline-offset: 4px;
 }
 
 /* =========================================================
    TABLET
 ========================================================= */
-
 @media (max-width: 900px) {
     :root {
         --page-padding: 24px;
@@ -746,28 +562,19 @@ button:focus-visible {
 
     .main-nav {
         position: fixed;
-
         top: 72px;
         left: 0;
         right: 0;
-
         display: flex;
         flex-direction: column;
         align-items: stretch;
-
         gap: 0;
-
         padding: 20px 24px 28px;
-
         background: rgba(5, 6, 7, 0.97);
-
         border-top: 1px solid var(--color-border-soft);
-
         transform: translateY(-120%);
-
         opacity: 0;
         visibility: hidden;
-
         transition:
             transform 250ms ease,
             opacity 250ms ease,
@@ -776,61 +583,43 @@ button:focus-visible {
 
     .main-nav a {
         display: block;
-
         padding-block: 14px;
-
         font-size: 0.95rem;
     }
 
     .mobile-nav-cta {
         display: block;
-
         margin-top: 12px;
-
         padding-top: 18px !important;
-
         border-top: 1px solid var(--color-border-soft);
-
         color: var(--color-gold-soft) !important;
     }
 
     .main-nav.is-open {
         transform: translateY(0);
-
         opacity: 1;
         visibility: visible;
     }
 
     .nav-toggle {
         display: flex;
-
         width: 42px;
         height: 42px;
-
         align-items: flex-end;
         justify-content: center;
-
         flex-direction: column;
-
         gap: 6px;
-
         padding: 0;
-
         border: 0;
-
         background: transparent;
-
         cursor: pointer;
     }
 
     .nav-toggle span {
         display: block;
-
         width: 22px;
         height: 1px;
-
         background: currentColor;
-
         transition:
             transform var(--transition-fast),
             opacity var(--transition-fast);
@@ -854,15 +643,12 @@ button:focus-visible {
 
     .hero-spec {
         min-height: 96px;
-
         gap: 14px;
-
         padding-inline: 20px;
     }
 
     .hero-spec-icon {
         flex-basis: 32px;
-
         width: 32px;
         height: 32px;
     }
@@ -885,14 +671,12 @@ button:focus-visible {
 /* =========================================================
    MOBILE — DESKTOP HERO SCALED
 ========================================================= */
-
 @media (max-width: 600px) {
     :root {
         --page-padding: 20px;
     }
 
     /* ---------- Header ---------- */
-
     .nav-wrapper {
         min-height: 64px;
     }
@@ -901,14 +685,11 @@ button:focus-visible {
         width: 40px;
         height: 40px;
         padding: 0;
-
         display: grid;
         place-items: center;
-
         border: 0;
         background: transparent;
         color: var(--color-gold);
-
         flex: 0 0 40px;
         margin-left: auto;
     }
@@ -932,30 +713,25 @@ button:focus-visible {
        HERO
        Keep desktop composition, scale entire hero
     ====================================================== */
-
     .hero {
         --hero-scale: calc(100vw / 1440px);
-
         width: 1440px;
         zoom: var(--hero-scale);
-
         margin-top: 64px;
     }
 
+    /* Duplicate rule — keeping both for safety */
     .hero {
         --hero-scale: calc(100vw / 1440px);
-
         width: 1440px;
         zoom: var(--hero-scale);
-
         margin-top: 64px;
     }
 }
 
 /* =========================================================
    WHY D9
-   ========================================================= */
-
+========================================================= */
 .why-d9-section {
     padding: 140px 0 160px;
     background: #08090a;
@@ -1045,8 +821,7 @@ button:focus-visible {
 
 /* =========================================================
    WHY D9 — MOBILE
-   ========================================================= */
-
+========================================================= */
 @media (max-width: 768px) {
     .why-d9-section {
         padding: 96px 0 110px;
@@ -1092,47 +867,36 @@ button:focus-visible {
         line-height: 1.7;
     }
 }
+
 /* =========================================================
    D9 EXPERIENCE
 ========================================================= */
-
 .d9-experience-section {
     padding: 110px 0 130px;
-
     background: #050607;
-
     color: var(--color-text);
 }
 
 /* ---------- Big Picture ---------- */
-
 .d9-experience-hero {
     position: relative;
-
     width: 100vw;
-
     margin: 0 0 0 calc(50% - 50vw);
-
     overflow: hidden;
-
     background: #0a0c0e;
 }
 
 .d9-experience-hero img {
     display: block;
-
     width: 100%;
     aspect-ratio: 1600 / 878;
-
     object-fit: cover;
     object-position: center;
 }
 
 .d9-experience-hero-overlay {
     position: absolute;
-
     inset: 0;
-
     background: linear-gradient(
         90deg,
         rgba(3, 4, 5, 0.76) 0%,
@@ -1145,66 +909,47 @@ button:focus-visible {
 
 .d9-experience-hero-content {
     position: absolute;
-
     top: 50%;
-
     left: max(
         var(--page-padding),
         calc((100vw - var(--container-width)) / 2 + var(--page-padding))
     );
-
     width: min(440px, 32vw);
-
     transform: translateY(-50%);
 }
 
 .d9-experience-hero-content .section-eyebrow {
     margin-bottom: 28px;
-
     color: rgba(255, 255, 255, 0.72);
 }
 
 .d9-experience-hero-content h2 {
     max-width: 440px;
-
     margin: 0;
-
     font-family: 'Times New Roman', Georgia, serif;
-
     font-size: clamp(4.4rem, 5vw, 5.4rem);
-
     font-weight: 400;
-
     line-height: 0.92;
-
     letter-spacing: -0.045em;
 }
 
 .d9-experience-hero-content h2 span {
     display: block;
-
     color: rgba(255, 255, 255, 0.58);
 }
 
 .d9-experience-hero-content p {
     max-width: 470px;
-
     margin: 34px 0 0;
-
     color: rgba(255, 255, 255, 0.78);
-
     font-size: 1rem;
-
     line-height: 1.75;
 }
 
 /* ---------- Feature Grid ---------- */
-
 .d9-experience-features {
     display: grid;
-
     grid-template-columns: repeat(3, minmax(0, 1fr));
-
     border-top: 1px solid rgba(255, 255, 255, 0.12);
 }
 
@@ -1220,14 +965,10 @@ button:focus-visible {
 .d9-experience-dot {
     width: 7px;
     height: 7px;
-
     padding: 0;
-
     border: 0;
     border-radius: 50%;
-
     background: rgba(255, 255, 255, 0.28);
-
     cursor: pointer;
 }
 
@@ -1237,57 +978,41 @@ button:focus-visible {
 
 .d9-experience-feature + .d9-experience-feature {
     position: relative;
-
     border-left: 0;
 }
 
 .d9-experience-feature + .d9-experience-feature::before {
     content: '';
-
     position: absolute;
-
     left: 0;
     top: 18%;
-
     width: 1px;
     height: 64%;
-
     background: rgba(255, 255, 255, 0.12);
 }
 
 .d9-experience-number {
     display: inline-flex;
     align-items: center;
-
     gap: 12px;
-
     color: rgba(255, 255, 255, 0.48);
-
     font-size: 0.76rem;
-
     letter-spacing: 0.12em;
 }
 
 .d9-experience-number::after {
     content: '';
-
     width: 42px;
     height: 1px;
-
     background: rgba(255, 255, 255, 0.38);
 }
 
 .d9-experience-feature h3 {
     margin: 28px 0 0;
-
     font-family: 'Times New Roman', Georgia, serif;
-
     font-size: clamp(1.8rem, 2.2vw, 2.5rem);
-
     font-weight: 400;
-
     line-height: 1;
-
     letter-spacing: -0.025em;
 }
 
@@ -1301,44 +1026,31 @@ button:focus-visible {
 
 .d9-experience-feature p {
     max-width: 390px;
-
     margin: 18px 0 24px;
-
     color: rgba(255, 255, 255, 0.58);
-
     font-size: 0.94rem;
-
     line-height: 1.75;
 }
 
 /* ---------- Feature Images ---------- */
-
 .d9-experience-feature-image {
     width: 100%;
-
     margin: 0;
-
     overflow: hidden;
 }
 
 .d9-experience-feature-image img {
     display: block;
-
     width: 100%;
     aspect-ratio: 4 / 3;
-
     object-fit: cover;
 }
 
 .d9-experience-note {
     margin-top: auto;
-
     padding-top: 24px;
-
     color: rgba(255, 255, 255, 0.38);
-
     font-size: 0.58rem;
-
     letter-spacing: 0.24em;
 }
 
@@ -1347,56 +1059,44 @@ button:focus-visible {
 }
 
 /* ---------- Footer Mark ---------- */
-
 .d9-experience-footer-mark {
     display: flex;
     align-items: center;
     justify-content: flex-end;
-
     gap: 18px;
-
     margin-top: 24px;
-
     color: rgba(255, 255, 255, 0.32);
 }
 
 .d9-experience-footer-mark span {
     width: 66px;
     height: 1px;
-
     background: rgba(255, 255, 255, 0.28);
 }
 
 .d9-experience-footer-mark small {
     font-size: 0.56rem;
-
     letter-spacing: 0.28em;
 }
 
 /* =========================================================
    D9 EXPERIENCE — MOBILE
 ========================================================= */
-
 @media (max-width: 768px) {
     .d9-experience-section {
         padding: 88px 0 104px;
     }
 
     /* ---------- Big Picture ---------- */
-
     .d9-experience-hero {
         width: 100vw;
-
         margin-left: calc(50% - 50vw);
-
         min-height: 610px;
     }
 
     .d9-experience-hero img {
         height: 610px;
-
         aspect-ratio: auto;
-
         object-position: 55% center;
     }
 
@@ -1412,13 +1112,10 @@ button:focus-visible {
 
     .d9-experience-hero-content {
         top: auto;
-
         left: 20px;
         right: 20px;
         bottom: 34px;
-
         width: auto;
-
         transform: none;
     }
 
@@ -1428,39 +1125,27 @@ button:focus-visible {
 
     .d9-experience-hero-content h2 {
         max-width: 340px;
-
         font-size: clamp(3rem, 14vw, 4.5rem);
-
         line-height: 0.92;
     }
 
     .d9-experience-hero-content p {
         max-width: 340px;
-
         margin-top: 22px;
-
         font-size: 0.9rem;
-
         line-height: 1.65;
     }
 
     /* ---------- Feature Grid ---------- */
-
     .d9-experience-features {
         display: flex;
-
         grid-template-columns: none;
-
         overflow-x: auto;
         overflow-y: hidden;
-
         scroll-snap-type: x mandatory;
         scroll-behavior: smooth;
-
         scrollbar-width: none;
-
         border-top: 1px solid rgba(255, 255, 255, 0.12);
-
         border-bottom: 1px solid rgba(255, 255, 255, 0.12);
     }
 
@@ -1470,30 +1155,23 @@ button:focus-visible {
 
     .d9-experience-feature {
         flex: 0 0 100%;
-
         min-width: 100%;
         min-height: 0;
-
         display: flex;
         scroll-snap-align: start;
-
         padding: 30px 20px 34px;
     }
 
     .d9-experience-slider-indicator {
         display: flex;
-
         align-items: center;
         justify-content: center;
-
         gap: 8px;
-
         padding-top: 18px;
     }
 
     .d9-experience-feature + .d9-experience-feature {
         border-left: 0;
-
         border-top: 0;
     }
 
@@ -1503,7 +1181,6 @@ button:focus-visible {
 
     .d9-experience-feature h3 {
         margin-top: 22px;
-
         font-size: 1.9rem;
     }
 
@@ -1513,11 +1190,8 @@ button:focus-visible {
 
     .d9-experience-feature p {
         max-width: none;
-
         margin-top: 14px;
-
         font-size: 0.9rem;
-
         line-height: 1.7;
     }
 
@@ -1527,7 +1201,6 @@ button:focus-visible {
 
     .d9-experience-feature-image img {
         aspect-ratio: 16 / 10;
-
         object-fit: cover;
         object-position: center;
     }
@@ -1544,7 +1217,6 @@ button:focus-visible {
 /* =========================================================
    MOBILE DEVICE — HERO IMAGE FRAMING
 ========================================================= */
-
 body.is-mobile-device .hero-media img {
     width: 100%;
     height: 100%;
@@ -1568,7 +1240,7 @@ body.is-mobile-device .hero-overlay {
 }
 
 /* =========================================================
-   MOBILE DEVICE — HEADER,HERO CONTENT SCALE, & BRAND POSITION
+   MOBILE DEVICE — HEADER, HERO CONTENT SCALE, & BRAND POSITION
 ========================================================= */
 body.is-mobile-device .main-nav a {
     font-size: 1.1rem;
@@ -1651,20 +1323,16 @@ body.is-mobile-device .scroll-icon::before {
     position: absolute;
     top: 4px;
     left: 50%;
-
     width: 14px;
     height: 14px;
-
     border-right: 2px solid rgba(255, 255, 255, 0.82);
     border-bottom: 2px solid rgba(255, 255, 255, 0.82);
-
     transform: translateX(-50%) rotate(45deg);
 }
 
 /* =========================================================
    WHY D9 — PHYSICAL MOBILE DEVICE
-   ========================================================= */
-
+========================================================= */
 body.is-mobile-device .why-d9-section {
     padding: 120px 0 140px;
 }
@@ -1733,41 +1401,30 @@ body.is-mobile-device .why-d9-content p {
 /* =========================================================
    TECHNOLOGY & SAFETY
 ========================================================= */
-
 .technology-safety-section {
     padding: 130px 0 150px;
-
     background: #050607;
     color: var(--color-text);
 }
 
 /* ---------- Hero ---------- */
-
 .technology-safety-hero {
     position: relative;
-
     min-height: 620px;
-
     display: grid;
     grid-template-columns: 0.78fr 1.22fr;
-
     align-items: stretch;
-
     overflow: hidden;
-
     background: #0a0c0e;
 }
 
 .technology-safety-copy {
     position: relative;
     z-index: 2;
-
     display: flex;
     flex-direction: column;
     justify-content: center;
-
     padding: 70px 60px 70px 34px;
-
     background: linear-gradient(
         90deg,
         rgba(5, 6, 7, 1) 0%,
@@ -1782,83 +1439,59 @@ body.is-mobile-device .why-d9-content p {
 
 .technology-safety-copy h2 {
     max-width: 620px;
-
     margin: 0;
-
     font-family: 'Times New Roman', Georgia, serif;
-
     font-size: clamp(4rem, 5.2vw, 6.2rem);
-
     font-weight: 400;
-
     line-height: 0.92;
-
     letter-spacing: -0.045em;
 }
 
 .technology-safety-copy h2 span {
     display: block;
-
     color: rgba(255, 255, 255, 0.58);
 }
 
 .technology-safety-copy > p {
     max-width: 470px;
-
     margin: 34px 0 0;
-
     color: rgba(255, 255, 255, 0.7);
-
     font-size: 1rem;
-
     line-height: 1.75;
 }
 
 /* ---------- Mark ---------- */
-
 .technology-safety-mark {
     display: flex;
     align-items: center;
-
     gap: 18px;
-
     margin-top: 42px;
-
     color: rgba(255, 255, 255, 0.4);
 }
 
 .technology-safety-mark span {
     width: 66px;
     height: 1px;
-
     background: var(--color-gold);
 }
 
 .technology-safety-mark small {
     font-size: 0.56rem;
-
     letter-spacing: 0.28em;
 }
 
 /* ---------- Main Image ---------- */
-
 .technology-safety-image {
     position: relative;
-
     min-width: 0;
-
     margin: 0;
-
     overflow: hidden;
 }
 
 .technology-safety-image::after {
     content: '';
-
     position: absolute;
-
     inset: 0;
-
     background: linear-gradient(
         90deg,
         rgba(5, 6, 7, 0.7) 0%,
@@ -1869,112 +1502,76 @@ body.is-mobile-device .why-d9-content p {
 
 .technology-safety-image img {
     display: block;
-
     width: 100%;
     height: 100%;
-
     object-fit: cover;
-
     object-position: center;
 }
 
 /* ---------- Technology Pillars ---------- */
-
 .technology-safety-pillars {
     display: grid;
-
     grid-template-columns: repeat(3, minmax(0, 1fr));
-
     border-top: 1px solid rgba(255, 255, 255, 0.12);
 }
 
 .technology-safety-pillar {
     position: relative;
-
     min-height: 330px;
-
     padding: 38px 34px 42px;
 }
 
 .technology-safety-pillar + .technology-safety-pillar::before {
     content: '';
-
     position: absolute;
-
     left: 0;
     top: 18%;
-
     width: 1px;
     height: 64%;
-
     background: rgba(255, 255, 255, 0.12);
 }
 
 .technology-safety-number {
     display: inline-flex;
     align-items: center;
-
     gap: 12px;
-
     color: rgba(255, 255, 255, 0.48);
-
     font-size: 0.76rem;
-
     letter-spacing: 0.12em;
 }
 
 .technology-safety-number::after {
     content: '';
-
     width: 42px;
     height: 1px;
-
     background: rgba(255, 255, 255, 0.38);
 }
 
 .technology-safety-pillar h3 {
     margin: 28px 0 0;
-
     font-family: 'Times New Roman', Georgia, serif;
-
     font-size: clamp(1.8rem, 2.2vw, 2.5rem);
-
     font-weight: 400;
-
     line-height: 1;
-
     letter-spacing: -0.025em;
 }
 
 .technology-safety-pillar p {
     max-width: 390px;
-
     margin: 20px 0 0;
-
     color: rgba(255, 255, 255, 0.58);
-
     font-size: 0.94rem;
-
     line-height: 1.75;
 }
 
 /* ---------- Safety Systems ---------- */
-
 .technology-safety-systems {
     display: grid;
-
-    grid-template-columns:
-        minmax(280px, 0.75fr)
-        minmax(0, 1.25fr);
-
+    grid-template-columns: minmax(280px, 0.75fr) minmax(0, 1.25fr);
     gap: 70px;
-
     padding-top: 70px;
-
     margin-top: 24px;
-
     border-top: 1px solid rgba(255, 255, 255, 0.12);
-
     align-items: end;
 }
 
@@ -1984,44 +1581,31 @@ body.is-mobile-device .why-d9-content p {
 
 .technology-safety-systems-intro h3 {
     max-width: 440px;
-
     margin: 0;
-
     font-family: 'Times New Roman', Georgia, serif;
-
     font-size: clamp(2.4rem, 3.2vw, 4rem);
-
     font-weight: 400;
-
     line-height: 0.98;
-
     letter-spacing: -0.035em;
 }
 
 .technology-safety-systems-intro h3 span {
     display: block;
-
     color: rgba(255, 255, 255, 0.58);
 }
 
 .technology-safety-system-list {
     display: grid;
-
     grid-template-columns: repeat(2, minmax(0, 1fr));
-
     border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .technology-safety-system {
     min-height: 92px;
-
     display: flex;
     align-items: center;
-
     gap: 18px;
-
     padding: 22px 24px;
-
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
@@ -2031,19 +1615,14 @@ body.is-mobile-device .why-d9-content p {
 
 .technology-safety-system span {
     color: rgba(255, 255, 255, 0.38);
-
     font-size: 0.68rem;
-
     letter-spacing: 0.12em;
 }
 
 .technology-safety-system strong {
     color: rgba(255, 255, 255, 0.78);
-
     font-size: 0.82rem;
-
     font-weight: 500;
-
     line-height: 1.4;
 }
 
@@ -2062,7 +1641,6 @@ body.is-mobile-device .why-d9-content p {
 /* =========================================================
    TECHNOLOGY & SAFETY — PHYSICAL MOBILE DEVICE
 ========================================================= */
-
 body.is-mobile-device .technology-safety-section {
     padding: 120px 0 140px;
 }
@@ -2073,21 +1651,16 @@ body.is-mobile-device .technology-safety-section .container {
 }
 
 /* ---------- Keep desktop composition ---------- */
-
 body.is-mobile-device .technology-safety-hero {
     display: grid;
     grid-template-columns: 0.78fr 1.22fr;
-
     min-height: 620px;
-
     background: #0a0c0e;
 }
 
 body.is-mobile-device .technology-safety-copy {
     order: initial;
-
     padding: 70px 60px 70px 34px;
-
     background: linear-gradient(
         90deg,
         rgba(5, 6, 7, 1) 0%,
@@ -2098,22 +1671,18 @@ body.is-mobile-device .technology-safety-copy {
 
 body.is-mobile-device .technology-safety-copy h2 {
     max-width: 620px;
-
     font-size: 6rem;
 }
 
 body.is-mobile-device .technology-safety-copy > p {
     max-width: 470px;
-
     margin-top: 34px;
-
     font-size: 1.35rem;
     line-height: 1.7;
 }
 
 body.is-mobile-device .technology-safety-image {
     order: initial;
-
     width: auto;
     height: auto;
 }
@@ -2132,7 +1701,6 @@ body.is-mobile-device .technology-safety-image::after {
 }
 
 /* ---------- Keep desktop pillar layout ---------- */
-
 body.is-mobile-device .technology-safety-pillars {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -2140,7 +1708,6 @@ body.is-mobile-device .technology-safety-pillars {
 
 body.is-mobile-device .technology-safety-pillar {
     min-height: 330px;
-
     padding: 38px 34px 42px;
 }
 
@@ -2154,46 +1721,36 @@ body.is-mobile-device .technology-safety-pillar + .technology-safety-pillar {
 
 body.is-mobile-device .technology-safety-pillar h3 {
     max-width: 720px;
-
     font-size: 2.8rem;
-
     min-height: 2em;
 }
 
 body.is-mobile-device .technology-safety-pillar p {
     max-width: 390px;
-
     margin-top: 20px;
-
     font-size: 1.35rem;
     line-height: 1.7;
 }
 
 /* ---------- Keep desktop Safety Systems layout ---------- */
-
 body.is-mobile-device .technology-safety-systems {
     display: grid;
-
     padding-top: 0;
-
     margin-top: 0;
 }
 
 body.is-mobile-device .technology-safety-systems-intro h3 {
     max-width: none;
-
     font-size: 3.6rem;
 }
 
 body.is-mobile-device .technology-safety-system-list {
     display: grid;
-
     margin-top: 0;
 }
 
 body.is-mobile-device .technology-safety-system {
     min-height: initial;
-
     padding: initial;
 }
 
@@ -2208,44 +1765,35 @@ body.is-mobile-device .technology-safety-system strong {
 /* =========================================================
    TECHNOLOGY & SAFETY — SUPPORTING IMAGES
 ========================================================= */
-
 .technology-safety-pillar-image {
     width: 100%;
     aspect-ratio: 16 / 9;
-
     margin: 28px 0 0;
-
     overflow: hidden;
 }
 
 .technology-safety-pillar-image img {
     display: block;
-
     width: 100%;
     height: 100%;
-
     object-fit: cover;
 }
 
 /* ---------- Physical Mobile Device ---------- */
-
 body.is-mobile-device .technology-safety-pillar-image {
     max-width: 720px;
-
     margin-top: 30px;
 }
 
 body.is-mobile-device .technology-safety-pillar-image img {
     width: 100%;
     height: 100%;
-
     object-fit: cover;
 }
 
 /* =========================================================
    DENZA LINEUP
 ========================================================= */
-
 .denza-lineup-section {
     position: relative;
     padding: 80px 0 140px;
@@ -2260,7 +1808,6 @@ body.is-mobile-device .technology-safety-pillar-image img {
 /* =========================
    INTRO
 ========================= */
-
 .denza-lineup-intro {
     position: absolute;
     z-index: 5;
@@ -2283,8 +1830,8 @@ body.is-mobile-device .technology-safety-pillar-image img {
     font-family: 'Times New Roman', Georgia, serif;
     font-size: clamp(3.8rem, 5.2vw, 6rem);
     font-weight: 400;
-    line-height: 0.88;
-    letter-spacing: -0.05em;
+    line-height: 0.9;
+    letter-spacing: -0.045em;
     color: #fff;
 }
 
@@ -2296,25 +1843,39 @@ body.is-mobile-device .technology-safety-pillar-image img {
     max-width: 350px;
     margin: 30px 0 0;
     color: rgba(255, 255, 255, 0.68);
+    font-family: var(--font-sans);
     font-size: 0.82rem;
+    font-weight: 400;
     line-height: 1.75;
-    letter-spacing: 0.01em;
+    letter-spacing: 0.005em;
+}
+
+.denza-lineup-intro-line {
+    width: 70px;
+    height: 1px;
+    margin-top: 30px;
+    background: rgba(255, 255, 255, 0.55);
+}
+
+.denza-lineup-intro-note {
+    display: block;
+    margin-top: 18px;
+    color: rgba(255, 255, 255, 0.62);
+    font-size: 0.58rem;
+    line-height: 1.9;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
 }
 
 /* =========================
-   GRID
+   GRID & CARD
 ========================= */
-
 .denza-lineup-grid {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 1px;
     background: rgba(255, 255, 255, 0.14);
 }
-
-/* =========================
-   CARD
-========================= */
 
 .denza-lineup-card {
     position: relative;
@@ -2327,6 +1888,9 @@ body.is-mobile-device .technology-safety-pillar-image img {
     grid-column: 1 / -1;
 }
 
+/* =========================
+   IMAGE
+========================= */
 .denza-lineup-image {
     position: relative;
     width: 100%;
@@ -2343,6 +1907,22 @@ body.is-mobile-device .technology-safety-pillar-image img {
 .denza-lineup-card--b5 .denza-lineup-image,
 .denza-lineup-card--z9 .denza-lineup-image {
     aspect-ratio: 16 / 9;
+}
+
+.denza-lineup-card--z9 .denza-lineup-image img {
+    object-position: 68% center;
+}
+
+.denza-lineup-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 700ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.denza-lineup-card:hover .denza-lineup-image img {
+    transform: scale(1.025);
 }
 
 .denza-lineup-image::after {
@@ -2390,22 +1970,9 @@ body.is-mobile-device .technology-safety-pillar-image img {
         );
 }
 
-.denza-lineup-image img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 700ms cubic-bezier(0.22, 1, 0.36, 1);
-}
-
-.denza-lineup-card:hover .denza-lineup-image img {
-    transform: scale(1.025);
-}
-
 /* =========================
-   CONTENT — OVERLAY
+   CONTENT — BASE
 ========================= */
-
 .denza-lineup-content {
     position: absolute;
     z-index: 3;
@@ -2416,19 +1983,21 @@ body.is-mobile-device .technology-safety-pillar-image img {
 .denza-lineup-number {
     display: block;
     color: rgba(255, 255, 255, 0.48);
+    font-family: var(--font-sans);
     font-size: 0.68rem;
-    font-weight: 600;
-    letter-spacing: 0.2em;
+    font-weight: 500;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
 }
 
 .denza-lineup-content h3 {
     margin: 14px 0 0;
+    color: #fff;
     font-family: 'Times New Roman', Georgia, serif;
     font-size: clamp(2.4rem, 3vw, 3.8rem);
     font-weight: 400;
-    line-height: 0.95;
-    letter-spacing: -0.035em;
-    color: #fff;
+    line-height: 0.94;
+    letter-spacing: -0.02em;
 }
 
 .denza-lineup-content p {
@@ -2439,15 +2008,30 @@ body.is-mobile-device .technology-safety-pillar-image img {
     line-height: 1.7;
 }
 
+.denza-lineup-model-type {
+    font-family: 'Times New Roman', Georgia, serif;
+    font-size: 0.9rem;
+    font-weight: 400;
+    letter-spacing: 0.01em;
+}
+
+.denza-lineup-content-line {
+    width: 70px;
+    height: 1px;
+    margin-top: 20px;
+    background: rgba(255, 255, 255, 0.55);
+}
+
 .denza-lineup-link {
     display: inline-flex;
     align-items: center;
     gap: 11px;
     margin-top: 24px;
     color: rgba(255, 255, 255, 0.92);
+    font-family: var(--font-sans);
     font-size: 0.64rem;
     font-weight: 600;
-    letter-spacing: 0.18em;
+    letter-spacing: 0.2em;
     text-transform: uppercase;
     text-decoration: none;
     transition:
@@ -2470,94 +2054,49 @@ body.is-mobile-device .technology-safety-pillar-image img {
     gap: 12px;
 }
 
-/* =========================================================
-   DENZA LINEUP — D9 COPY POSITION REFINEMENT
-========================================================= */
-
+/* =========================
+   D9 — FLAGSHIP
+========================= */
 .denza-lineup-card--d9 .denza-lineup-content {
     top: 65%;
-
     right: -1%;
-
     bottom: auto;
-
     left: auto;
-
-    width: 300px;
-
+    width: 260px;
     padding: 0;
-
-    transform: translateY(-50%) translateX(20%);
-}
-
-.denza-lineup-intro p {
-    max-width: 390px;
-
-    margin-top: 24px;
-
-    font-size: 0.92rem;
-
-    font-weight: 400;
-
-    line-height: 1.65;
-
-    letter-spacing: 0.01em;
+    transform: translateY(-50%);
 }
 
 .denza-lineup-card--d9 .denza-lineup-content h3 {
-    margin: 0;
-
-    font-size: clamp(2.4rem, 2.7vw, 3.2rem);
-
-    line-height: 0.95;
-
-    white-space: nowrap;
+    font-size: clamp(2.8rem, 3vw, 3.5rem);
 }
 
-.denza-lineup-card--d9 .denza-lineup-content p {
+.denza-lineup-card--d9 .denza-lineup-number {
+    font-size: 0.62rem;
+    letter-spacing: 0.32em;
+}
+
+.denza-lineup-card--d9 .denza-lineup-model-type {
     max-width: 220px;
-
-    margin-top: 16px;
-
-    font-size: 0.82rem;
-
+    margin-top: 12px;
+    font-size: 1.2rem;
     line-height: 1.6;
+    opacity: 0.82;
+}
+
+.denza-lineup-card--d9 .denza-lineup-content-line {
+    width: 38px;
+    background: rgba(255, 255, 255, 0.38);
 }
 
 .denza-lineup-card--d9 .denza-lineup-link {
-    margin-top: 20px;
-}
-
-.denza-lineup-intro::after {
-    content: 'DIFFERENT WAYS TO MOVE\A A BRIGHTER TOMORROW';
-
-    white-space: pre-line;
-
-    display: block;
-
-    margin-top: 30px;
-
-    padding-top: 18px;
-
-    width: fit-content;
-
-    border-top: 1px solid rgba(255, 255, 255, 0.55);
-
-    font-size: 0.58rem;
-
-    line-height: 1.9;
-
-    letter-spacing: 0.28em;
-
-    text-transform: uppercase;
-
-    color: rgba(255, 255, 255, 0.62);
+    margin-top: 16px;
+    font-size: 0.62rem;
 }
 
 /* =========================
    B5 / Z9
 ========================= */
-
 .denza-lineup-card--b5 .denza-lineup-content,
 .denza-lineup-card--z9 .denza-lineup-content {
     top: 0;
@@ -2570,16 +2109,19 @@ body.is-mobile-device .technology-safety-pillar-image img {
 
 .denza-lineup-card--b5 .denza-lineup-content h3,
 .denza-lineup-card--z9 .denza-lineup-content h3 {
-    font-size: clamp(2.3rem, 3vw, 3.5rem);
+    font-size: clamp(3rem, 3.5vw, 4.2rem);
     line-height: 0.92;
     letter-spacing: -0.04em;
 }
 
 .denza-lineup-card--b5 .denza-lineup-content p,
 .denza-lineup-card--z9 .denza-lineup-content p {
-    max-width: 200px;
+    max-width: 100px;
     margin-top: 15px;
-    font-size: 0.76rem;
-    line-height: 1.7;
     color: rgba(255, 255, 255, 0.68);
+    font-family: 'Times New Roman', Georgia, serif;
+    font-size: 0.9rem;
+    line-height: 1.7;
+    letter-spacing: 0.01em;
+    text-transform: uppercase;
 }
