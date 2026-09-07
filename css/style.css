@@ -1830,8 +1830,8 @@ body.is-mobile-device .technology-safety-pillar-image img {
     font-family: 'Times New Roman', Georgia, serif;
     font-size: clamp(3.8rem, 5.2vw, 6rem);
     font-weight: 400;
-    line-height: 0.9;
-    letter-spacing: -0.045em;
+    line-height: 0.88;
+    letter-spacing: -0.05em;
     color: #fff;
 }
 
@@ -1843,32 +1843,13 @@ body.is-mobile-device .technology-safety-pillar-image img {
     max-width: 350px;
     margin: 30px 0 0;
     color: rgba(255, 255, 255, 0.68);
-    font-family: var(--font-sans);
     font-size: 0.82rem;
-    font-weight: 400;
     line-height: 1.75;
-    letter-spacing: 0.005em;
-}
-
-.denza-lineup-intro-line {
-    width: 70px;
-    height: 1px;
-    margin-top: 30px;
-    background: rgba(255, 255, 255, 0.55);
-}
-
-.denza-lineup-intro-note {
-    display: block;
-    margin-top: 18px;
-    color: rgba(255, 255, 255, 0.62);
-    font-size: 0.58rem;
-    line-height: 1.9;
-    letter-spacing: 0.28em;
-    text-transform: uppercase;
+    letter-spacing: 0.01em;
 }
 
 /* =========================
-   GRID & CARD
+   GRID
 ========================= */
 .denza-lineup-grid {
     display: grid;
@@ -1877,6 +1858,9 @@ body.is-mobile-device .technology-safety-pillar-image img {
     background: rgba(255, 255, 255, 0.14);
 }
 
+/* =========================
+   CARD
+========================= */
 .denza-lineup-card {
     position: relative;
     min-width: 0;
@@ -1888,9 +1872,6 @@ body.is-mobile-device .technology-safety-pillar-image img {
     grid-column: 1 / -1;
 }
 
-/* =========================
-   IMAGE
-========================= */
 .denza-lineup-image {
     position: relative;
     width: 100%;
@@ -1909,20 +1890,11 @@ body.is-mobile-device .technology-safety-pillar-image img {
     aspect-ratio: 16 / 9;
 }
 
+/* =========================================================
+   DENZA LINEUP — Z9 IMAGE FRAMING
+========================================================= */
 .denza-lineup-card--z9 .denza-lineup-image img {
     object-position: 68% center;
-}
-
-.denza-lineup-image img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 700ms cubic-bezier(0.22, 1, 0.36, 1);
-}
-
-.denza-lineup-card:hover .denza-lineup-image img {
-    transform: scale(1.025);
 }
 
 .denza-lineup-image::after {
@@ -1970,8 +1942,20 @@ body.is-mobile-device .technology-safety-pillar-image img {
         );
 }
 
+.denza-lineup-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 700ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.denza-lineup-card:hover .denza-lineup-image img {
+    transform: scale(1.025);
+}
+
 /* =========================
-   CONTENT — BASE
+   CONTENT — OVERLAY
 ========================= */
 .denza-lineup-content {
     position: absolute;
@@ -1983,21 +1967,19 @@ body.is-mobile-device .technology-safety-pillar-image img {
 .denza-lineup-number {
     display: block;
     color: rgba(255, 255, 255, 0.48);
-    font-family: var(--font-sans);
     font-size: 0.68rem;
-    font-weight: 500;
-    letter-spacing: 0.3em;
-    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 0.2em;
 }
 
 .denza-lineup-content h3 {
     margin: 14px 0 0;
-    color: #fff;
     font-family: 'Times New Roman', Georgia, serif;
     font-size: clamp(2.4rem, 3vw, 3.8rem);
     font-weight: 400;
-    line-height: 0.94;
-    letter-spacing: -0.02em;
+    line-height: 0.95;
+    letter-spacing: -0.035em;
+    color: #fff;
 }
 
 .denza-lineup-content p {
@@ -2008,30 +1990,15 @@ body.is-mobile-device .technology-safety-pillar-image img {
     line-height: 1.7;
 }
 
-.denza-lineup-model-type {
-    font-family: 'Times New Roman', Georgia, serif;
-    font-size: 0.9rem;
-    font-weight: 400;
-    letter-spacing: 0.01em;
-}
-
-.denza-lineup-content-line {
-    width: 70px;
-    height: 1px;
-    margin-top: 20px;
-    background: rgba(255, 255, 255, 0.55);
-}
-
 .denza-lineup-link {
     display: inline-flex;
     align-items: center;
     gap: 11px;
     margin-top: 24px;
     color: rgba(255, 255, 255, 0.92);
-    font-family: var(--font-sans);
     font-size: 0.64rem;
     font-weight: 600;
-    letter-spacing: 0.2em;
+    letter-spacing: 0.18em;
     text-transform: uppercase;
     text-decoration: none;
     transition:
@@ -2054,44 +2021,71 @@ body.is-mobile-device .technology-safety-pillar-image img {
     gap: 12px;
 }
 
-/* =========================
-   D9 — FLAGSHIP
-========================= */
+/* =========================================================
+   DENZA LINEUP — D9 COPY POSITION REFINEMENT
+========================================================= */
 .denza-lineup-card--d9 .denza-lineup-content {
     top: 65%;
     right: -1%;
     bottom: auto;
     left: auto;
-    width: 260px;
+    width: 300px;
     padding: 0;
-    transform: translateY(-50%);
+    transform: translateY(-50%) translateX(20%);
 }
 
 .denza-lineup-card--d9 .denza-lineup-content h3 {
     font-size: clamp(2.8rem, 3vw, 3.5rem);
+    letter-spacing: -0.035em;
 }
 
-.denza-lineup-card--d9 .denza-lineup-number {
-    font-size: 0.62rem;
-    letter-spacing: 0.32em;
-}
-
-.denza-lineup-card--d9 .denza-lineup-model-type {
+.denza-lineup-card--d9 .denza-lineup-content p {
     max-width: 220px;
-    margin-top: 12px;
+    margin-top: 16px;
     font-size: 1.2rem;
     line-height: 1.6;
-    opacity: 0.82;
 }
 
-.denza-lineup-card--d9 .denza-lineup-content-line {
-    width: 38px;
-    background: rgba(255, 255, 255, 0.38);
+.denza-lineup-intro-line {
+    width: 70px;
+    height: 1px;
+    margin-top: 30px;
+    background: rgba(255, 255, 255, 0.55);
+}
+
+.denza-lineup-content-line {
+    width: 70px;
+    height: 1px;
+    margin-top: 20px;
+    background: rgba(255, 255, 255, 0.55);
+}
+
+.denza-lineup-intro-note {
+    display: block;
+    margin-top: 18px;
+    font-size: 0.58rem;
+    line-height: 1.9;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.62);
 }
 
 .denza-lineup-card--d9 .denza-lineup-link {
-    margin-top: 16px;
-    font-size: 0.62rem;
+    margin-top: 20px;
+}
+
+.denza-lineup-intro::after {
+    white-space: pre-line;
+    display: block;
+    margin-top: 30px;
+    padding-top: 18px;
+    width: fit-content;
+    border-top: 1px solid rgba(255, 255, 255, 0.55);
+    font-size: 0.58rem;
+    line-height: 1.9;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.62);
 }
 
 /* =========================
@@ -2118,10 +2112,459 @@ body.is-mobile-device .technology-safety-pillar-image img {
 .denza-lineup-card--z9 .denza-lineup-content p {
     max-width: 100px;
     margin-top: 15px;
-    color: rgba(255, 255, 255, 0.68);
-    font-family: 'Times New Roman', Georgia, serif;
     font-size: 0.9rem;
+    font-family: 'Times new roman', Georgia, serif;
     line-height: 1.7;
     letter-spacing: 0.01em;
     text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.68);
+}
+
+/* =========================================================
+   DENZA LINEUP — EDITORIAL TYPOGRAPHY
+========================================================= */
+.denza-lineup-section .denza-lineup-intro h2 {
+    font-family: 'Times New Roman', Georgia, serif;
+    font-weight: 400;
+    letter-spacing: -0.045em;
+    line-height: 0.9;
+}
+
+.denza-lineup-section .denza-lineup-intro p {
+    font-family: var(--font-sans);
+    font-weight: 400;
+    letter-spacing: 0.005em;
+}
+
+.denza-lineup-section .denza-lineup-content h3 {
+    font-family: 'Times New Roman', Georgia, serif;
+    font-weight: 400;
+    letter-spacing: -0.02em;
+    line-height: 0.94;
+}
+
+.denza-lineup-section .denza-lineup-number {
+    font-family: var(--font-sans);
+    font-weight: 500;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+}
+
+.denza-lineup-section .denza-lineup-model-type {
+    font-family: 'Times New Roman', Georgia, serif;
+    font-weight: 400;
+    letter-spacing: 0.01em;
+    font-size: 0.9rem;
+}
+
+.denza-lineup-section .denza-lineup-link {
+    font-family: var(--font-sans);
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+}
+
+/* =========================================================
+   DENZA LINEUP — D9 COPY POSITION
+========================================================= */
+.denza-lineup-card--d9 .denza-lineup-content {
+    right: -1%;
+    width: 260px;
+    transform: translateY(-50%);
+}
+
+.denza-lineup-card--d9 .denza-lineup-number {
+    font-size: 0.62rem;
+    letter-spacing: 0.32em;
+}
+
+.denza-lineup-card--d9 .denza-lineup-model-type {
+    margin-top: 12px;
+    font-size: 1.2rem;
+    opacity: 0.82;
+}
+
+.denza-lineup-card--d9 .denza-lineup-content-line {
+    width: 38px;
+    height: 1px;
+    margin-top: 20px;
+    background: rgba(255, 255, 255, 0.38);
+}
+
+.denza-lineup-card--d9 .denza-lineup-link {
+    margin-top: 16px;
+    font-size: 0.62rem;
+    letter-spacing: 0.2em;
+}
+
+/* =========================================================
+   DENZA B5 EXPERIENCE
+========================================================= */
+.denza-b5-section {
+    position: relative;
+    background: #080b0e;
+    color: #f4f4f1;
+    overflow: hidden;
+}
+
+.denza-b5-hero {
+    position: relative;
+    min-height: 560px;
+    overflow: hidden;
+    background: #101419;
+}
+
+.denza-b5-hero > img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center 42%;
+}
+
+.denza-b5-hero-overlay {
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(
+            90deg,
+            rgba(4, 7, 10, 0.88) 0%,
+            rgba(4, 7, 10, 0.55) 32%,
+            rgba(4, 7, 10, 0.08) 67%,
+            rgba(4, 7, 10, 0.18) 100%
+        ),
+        linear-gradient(
+            180deg,
+            rgba(4, 7, 10, 0.18) 0%,
+            rgba(4, 7, 10, 0.05) 55%,
+            rgba(4, 7, 10, 0.68) 100%
+        );
+}
+
+.denza-b5-hero-inner {
+    position: relative;
+    z-index: 2;
+    min-height: 560px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 32px;
+    padding-bottom: 34px;
+}
+
+.denza-b5-hero-copy {
+    max-width: 470px;
+}
+
+.denza-b5-eyebrow,
+.denza-b5-index,
+.denza-b5-note,
+.denza-b5-hero-side-note {
+    font-family: var(--font-sans);
+    text-transform: uppercase;
+    letter-spacing: 0.24em;
+}
+
+.denza-b5-eyebrow {
+    display: block;
+    margin-bottom: 22px;
+    font-size: 0.68rem;
+    color: rgba(255, 255, 255, 0.72);
+}
+
+.denza-b5-hero h2 {
+    margin: 0;
+    font-family: var(--font-sans);
+    font-size: clamp(3.2rem, 4.8vw, 5.4rem);
+    font-weight: 400;
+    line-height: 0.92;
+    letter-spacing: -0.045em;
+    text-align: left;
+    color: #fff;
+}
+
+.denza-b5-hero-copy > p {
+    margin: 25px 0 0;
+    font-family: var(--font-sans);
+    font-size: 1rem;
+    line-height: 1.55;
+    letter-spacing: 0.005em;
+    color: rgba(255, 255, 255, 0.78);
+}
+
+.denza-b5-rule,
+.denza-b5-small-rule {
+    width: 40px;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.68);
+}
+
+.denza-b5-rule {
+    margin-top: 23px;
+}
+
+.denza-b5-note {
+    display: block;
+    margin-top: 17px;
+    font-size: 0.56rem;
+    line-height: 1.85;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.denza-b5-actions {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-top: 25px;
+}
+
+.denza-b5-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 15px;
+    min-height: 50px;
+    padding: 0 27px;
+    background: #e1c88f;
+    color: #111315;
+    font-family: var(--font-sans);
+    font-size: 0.67rem;
+    font-weight: 700;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+    transition:
+        transform 180ms ease,
+        background 180ms ease;
+}
+
+.denza-b5-button:hover {
+    transform: translateY(-2px);
+    background: #edd9a8;
+}
+
+.denza-b5-text-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    color: rgba(255, 255, 255, 0.88);
+    font-size: 0.68rem;
+    letter-spacing: 0.08em;
+}
+
+.denza-b5-hero-side-note {
+    align-self: flex-end;
+    margin-bottom: 10px;
+    padding-right: 25px;
+    font-size: 0.55rem;
+    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.78);
+    text-align: left;
+}
+
+.denza-b5-highlights {
+    padding: 18px 0 22px;
+    background: #0a0e12;
+}
+
+.denza-b5-highlight-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 30px;
+}
+
+.denza-b5-highlight figure {
+    height: 132px;
+    margin: 0 0 13px;
+    overflow: hidden;
+    background: #14191e;
+}
+
+.denza-b5-highlight figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 500ms ease;
+}
+
+.denza-b5-highlight:hover figure img {
+    transform: scale(1.025);
+}
+
+.denza-b5-index {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 0.54rem;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.denza-b5-highlight h3 {
+    margin: 0;
+    font-family: var(--font-sans);
+    font-size: 1.05rem;
+    font-weight: 500;
+    line-height: 1.15;
+    letter-spacing: 0.075em;
+    color: #fff;
+}
+
+.denza-b5-highlight p {
+    max-width: 330px;
+    margin: 9px 0 0;
+    font-family: var(--font-sans);
+    font-size: 0.74rem;
+    line-height: 1.55;
+    color: rgba(255, 255, 255, 0.68);
+}
+
+.denza-b5-small-rule {
+    margin-top: 13px;
+}
+
+.denza-b5-horizon {
+    display: grid;
+    grid-template-columns: 1.08fr 0.92fr;
+    min-height: 300px;
+    background: #10161d;
+}
+
+.denza-b5-horizon-image {
+    position: relative;
+    min-height: 300px;
+    overflow: hidden;
+}
+
+.denza-b5-horizon-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.denza-b5-horizon-image::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.52), transparent 55%);
+}
+
+.denza-b5-horizon-label {
+    position: absolute;
+    z-index: 1;
+    left: max(32px, calc((100vw - var(--container-width)) / 2 + 32px));
+    bottom: 30px;
+    font-size: 0.58rem;
+    line-height: 1.65;
+    letter-spacing: 0.25em;
+}
+
+.denza-b5-horizon-copy {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 42px 7vw 42px 48px;
+}
+
+.denza-b5-horizon-copy .denza-b5-eyebrow {
+    margin-bottom: 14px;
+}
+
+.denza-b5-horizon-copy h3 {
+    margin: 0;
+    font-family: var(--font-sans);
+    font-size: clamp(2.2rem, 3.2vw, 3.6rem);
+    font-weight: 400;
+    line-height: 0.98;
+    letter-spacing: -0.04em;
+}
+
+.denza-b5-horizon-copy p {
+    max-width: 520px;
+    margin: 17px 0 23px;
+    font-size: 0.76rem;
+    line-height: 1.65;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.denza-b5-destinations {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1px;
+    background: rgba(255, 255, 255, 0.12);
+}
+
+.denza-b5-destination {
+    position: relative;
+    height: 145px;
+    overflow: hidden;
+    background: #101419;
+}
+
+.denza-b5-destination img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.72);
+    transition:
+        transform 500ms ease,
+        filter 500ms ease;
+}
+
+.denza-b5-destination:hover img {
+    transform: scale(1.025);
+    filter: brightness(0.82);
+}
+
+.denza-b5-destination::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, transparent 30%, rgba(0, 0, 0, 0.7));
+}
+
+.denza-b5-destination span {
+    position: absolute;
+    z-index: 1;
+    left: 32px;
+    bottom: 26px;
+    font-size: 0.62rem;
+    font-weight: 600;
+    line-height: 1.6;
+    letter-spacing: 0.22em;
+}
+
+.denza-b5-destination i {
+    position: absolute;
+    z-index: 1;
+    left: 32px;
+    bottom: 17px;
+    width: 40px;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.65);
+}
+
+.denza-b5-footer-line {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    padding: 19px 32px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.62);
+    font-size: 0.54rem;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+}
+
+@media (max-width: 900px) {
+    .denza-b5-hero,
+    .denza-b5-hero-inner {
+        min-height: 500px;
+    }
+    .denza-b5-highlight-grid {
+        gap: 18px;
+    }
+    .denza-b5-horizon-copy {
+        padding-left: 34px;
+        padding-right: 34px;
+    }
 }
