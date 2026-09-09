@@ -1,7 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     const navToggle = document.querySelector('.nav-toggle');
     const mainNav = document.querySelector('.main-nav');
-
     const navLinks = mainNav?.querySelectorAll('a');
 
     /* =====================================================
@@ -43,7 +42,43 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     }
+
+    /* =====================================================
+       Z9 INTEREST FORM → WHATSAPP
+    ===================================================== */
+
+    const z9Form = document.querySelector('.denza-z9-form');
+
+    if (z9Form) {
+        z9Form.addEventListener('submit', (event) => {
+            event.preventDefault();
+
+            const name = z9Form.elements.name?.value.trim() || '';
+            const whatsapp = z9Form.elements.whatsapp?.value.trim() || '';
+            const email = z9Form.elements.email?.value.trim() || '';
+
+            const message = [
+                'Hi Dodo, I’m interested in the DENZA Z9.',
+                '',
+                `Name: ${name}`,
+                `WhatsApp: ${whatsapp}`,
+                email ? `Email: ${email}` : '',
+                '',
+                'I’d like to register my interest and receive more information about the Z9.',
+            ]
+                .filter(Boolean)
+                .join('\n');
+
+            const whatsappUrl = `https://wa.me/6288294745477?text=${encodeURIComponent(message)}`;
+
+            window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
+        });
+    }
 });
+
+/* =====================================================
+   D9 EXPERIENCE SLIDER
+===================================================== */
 
 const d9ExperienceSlider = document.querySelector('.d9-experience-features');
 const d9ExperienceSlides = document.querySelectorAll('.d9-experience-feature');

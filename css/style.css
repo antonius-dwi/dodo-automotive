@@ -263,8 +263,9 @@ a {
 
 /* ---------- Brand label ---------- */
 .hero-brand {
-    width: 200px;
-    margin: 0 0 18px;
+    width: 420px;
+    margin: 0;
+    transform: translateY(-55px);
 }
 
 .hero-brand img {
@@ -2312,7 +2313,7 @@ body.is-mobile-device .technology-safety-pillar-image img {
 }
 
 .denza-b5-eyebrow {
-    display: block;
+    display: none;
     margin-bottom: 22px;
     font-size: 0.68rem;
     color: rgba(255, 255, 255, 0.72);
@@ -2666,7 +2667,10 @@ body.is-mobile-device .technology-safety-pillar-image img {
     max-width: 500px;
 }
 
-.denza-z9-eyebrow,
+.denza-z9-eyebrow {
+    display: none;
+}
+,
 .denza-z9-index,
 .denza-z9-status,
 .denza-z9-side-note,
@@ -3579,4 +3583,39 @@ body.is-mobile-device .technology-safety-pillar-image img {
     .dealer-experience-item p {
         font-size: 0.82rem;
     }
+}
+
+/* =========================================================
+   DENZA × HARMONY AUTO BRAND MARK
+   ========================================================= */
+/* =========================================================
+   SECTION BRAND LOGO
+========================================================= */
+
+.section-brand-logo {
+    position: absolute;
+    z-index: 10;
+    pointer-events: none;
+    transform: translateY(-60px);
+}
+
+.section-brand-logo img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Visual sections: About Dodo / Dealer */
+.section-brand-logo--visual {
+    top: 42px;
+    left: max(32px, calc((100vw - var(--container-width)) / 2 + 32px));
+    width: 360px;
+}
+
+/* Product / lineup sections */
+.section-brand-logo--rail {
+    top: 56px;
+    left: 32px;
+    width: 360px;
 }
